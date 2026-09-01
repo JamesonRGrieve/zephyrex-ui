@@ -1,0 +1,11 @@
+@zephyrex/ui
+Copyright (C) 2026 Jameson R Grieve
+
+This program is free software: you can redistribute it and/or modify it under the
+terms of the GNU Affero General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later version.
+See the LICENSE file for the full text.
+
+This product bundles and builds on third-party open-source software. Their
+copyright and permission notices are retained in THIRD-PARTY-LICENSES.md, including
+anime.js (MIT), Motion (MIT), clsx (MIT), and tailwind-merge (MIT).

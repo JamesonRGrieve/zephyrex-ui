@@ -1,0 +1,20 @@
+[
+  {
+    "name": "index (entry, brotli)",
+    "path": "dist/index.js",
+    "limit": "70 KB",
+    "ignore": ["react", "react-dom"]
+  },
+  {
+    "name": "AnimatedNumber (anime.js, brotli)",
+    "path": "dist/AnimatedNumber.js",
+    "limit": "28 KB",
+    "ignore": ["react", "react-dom"]
+  },
+  {
+    "name": "FadeIn (motion, brotli)",
+    "path": "dist/FadeIn.js",
+    "limit": "55 KB",
+    "ignore": ["react", "react-dom"]
+  }
+]
