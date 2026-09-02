@@ -11,7 +11,7 @@
     "types"
   ],
   "totals": {
-    "total": 21
+    "total": 25
   },
   "counts": {
     "files": 0,
@@ -25,7 +25,7 @@
     "types": 0,
     "enumMembers": 0,
     "classMembers": 0,
-    "duplicates": 18,
+    "duplicates": 22,
     "namespaceMembers": 0
   }
 }

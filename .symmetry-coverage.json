@@ -1,11 +1,15 @@
 {
-  "componentsTotal": 23,
-  "sourcesTotal": 31,
-  "componentsMissingStoriesCount": 17,
-  "sourcesMissingTestsCount": 4,
+  "componentsTotal": 27,
+  "sourcesTotal": 36,
+  "componentsMissingStoriesCount": 21,
+  "sourcesMissingTestsCount": 5,
   "componentsMissingStories": [
     "src/backgrounds/GrainGradientBackground.tsx",
     "src/backgrounds/MeshGradientBackground.tsx",
+    "src/blocks/CTASection.tsx",
+    "src/blocks/FeatureGrid.tsx",
+    "src/blocks/Hero.tsx",
+    "src/blocks/PricingCard.tsx",
     "src/motion/Marquee.tsx",
     "src/motion/ScaleIn.tsx",
     "src/motion/SlideIn.tsx",
@@ -24,6 +28,7 @@
   ],
   "sourcesMissingTests": [
     "src/backgrounds/index.ts",
+    "src/blocks/index.ts",
     "src/motion/index.ts",
     "src/primitives/index.ts",
     "src/visualization/index.ts"
