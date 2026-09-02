@@ -1,8 +1,8 @@
 {
-  "componentsTotal": 20,
-  "sourcesTotal": 27,
-  "componentsMissingStoriesCount": 14,
-  "sourcesMissingTestsCount": 3,
+  "componentsTotal": 23,
+  "sourcesTotal": 31,
+  "componentsMissingStoriesCount": 17,
+  "sourcesMissingTestsCount": 4,
   "componentsMissingStories": [
     "src/backgrounds/GrainGradientBackground.tsx",
     "src/backgrounds/MeshGradientBackground.tsx",
@@ -17,11 +17,15 @@
     "src/primitives/Separator.tsx",
     "src/primitives/Skeleton.tsx",
     "src/primitives/Spinner.tsx",
-    "src/primitives/Switch.tsx"
+    "src/primitives/Switch.tsx",
+    "src/visualization/BarList.tsx",
+    "src/visualization/KpiCard.tsx",
+    "src/visualization/Sparkline.tsx"
   ],
   "sourcesMissingTests": [
     "src/backgrounds/index.ts",
     "src/motion/index.ts",
-    "src/primitives/index.ts"
+    "src/primitives/index.ts",
+    "src/visualization/index.ts"
   ]
 }
