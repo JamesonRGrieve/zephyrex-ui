@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import { animate } from 'animejs';
 import { type HTMLAttributes, type JSX, useEffect, useRef } from 'react';
-import { usePrefersReducedMotion } from './hooks/usePrefersReducedMotion';
-import { cn } from './lib/utils';
+import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
+import { cn } from '../lib/utils';
 
 const DEFAULT_DURATION_MS = 1200;
 const DEFAULT_EASE = 'outExpo';

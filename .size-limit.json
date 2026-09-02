@@ -7,13 +7,13 @@
   },
   {
     "name": "AnimatedNumber (anime.js, brotli)",
-    "path": "dist/AnimatedNumber.js",
+    "path": "dist/motion/AnimatedNumber.js",
     "limit": "28 KB",
     "ignore": ["react", "react-dom"]
   },
   {
     "name": "FadeIn (motion, brotli)",
-    "path": "dist/FadeIn.js",
+    "path": "dist/motion/FadeIn.js",
     "limit": "55 KB",
     "ignore": ["react", "react-dom"]
   }

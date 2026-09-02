@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import { type Variants, motion } from 'motion/react';
 import { Children, type JSX, type ReactNode } from 'react';
-import { usePrefersReducedMotion } from './hooks/usePrefersReducedMotion';
-import { cn } from './lib/utils';
+import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
+import { cn } from '../lib/utils';
 
 const MS_PER_SECOND = 1000;
 const DEFAULT_STAGGER_MS = 80;
