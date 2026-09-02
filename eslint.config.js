@@ -371,6 +371,14 @@ export default [
   },
   {
     files: ['src/**/*.test.ts', 'src/**/*.test.tsx', 'tests/**/*.ts', 'tests/**/*.tsx'],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: { jsx: true },
+      },
+    },
     plugins: { vitest },
     rules: {
       ...vitest.configs.recommended.rules,

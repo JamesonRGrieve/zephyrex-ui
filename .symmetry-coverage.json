@@ -1,9 +1,13 @@
 {
-  "componentsTotal": 14,
-  "sourcesTotal": 20,
-  "componentsMissingStoriesCount": 8,
+  "componentsTotal": 18,
+  "sourcesTotal": 24,
+  "componentsMissingStoriesCount": 12,
   "sourcesMissingTestsCount": 2,
   "componentsMissingStories": [
+    "src/motion/Marquee.tsx",
+    "src/motion/ScaleIn.tsx",
+    "src/motion/SlideIn.tsx",
+    "src/motion/TextShimmer.tsx",
     "src/primitives/Alert.tsx",
     "src/primitives/Input.tsx",
     "src/primitives/Label.tsx",

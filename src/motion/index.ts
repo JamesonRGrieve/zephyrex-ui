@@ -9,3 +9,15 @@ export type { FadeInProps } from './FadeIn';
 
 export { default as Stagger } from './Stagger';
 export type { StaggerProps } from './Stagger';
+
+export { default as SlideIn } from './SlideIn';
+export type { SlideInProps, SlideDirection } from './SlideIn';
+
+export { default as ScaleIn } from './ScaleIn';
+export type { ScaleInProps } from './ScaleIn';
+
+export { default as TextShimmer } from './TextShimmer';
+export type { TextShimmerProps } from './TextShimmer';
+
+export { default as Marquee } from './Marquee';
+export type { MarqueeProps } from './Marquee';
