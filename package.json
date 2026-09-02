@@ -107,6 +107,7 @@
     "react-dom": ">=18"
   },
   "dependencies": {
+    "@paper-design/shaders-react": "^0.0.80",
     "animejs": "^4.0.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

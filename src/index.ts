@@ -14,6 +14,7 @@
 
 export * from './motion';
 export * from './primitives';
+export * from './backgrounds';
 
 // Shared foundation.
 export { usePrefersReducedMotion } from './hooks/usePrefersReducedMotion';

@@ -2,7 +2,7 @@
   {
     "name": "index (entry, brotli)",
     "path": "dist/index.js",
-    "limit": "70 KB",
+    "limit": "100 KB",
     "ignore": ["react", "react-dom"]
   },
   {

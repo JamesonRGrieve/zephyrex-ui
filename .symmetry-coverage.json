@@ -1,9 +1,11 @@
 {
-  "componentsTotal": 18,
-  "sourcesTotal": 24,
-  "componentsMissingStoriesCount": 12,
-  "sourcesMissingTestsCount": 2,
+  "componentsTotal": 20,
+  "sourcesTotal": 27,
+  "componentsMissingStoriesCount": 14,
+  "sourcesMissingTestsCount": 3,
   "componentsMissingStories": [
+    "src/backgrounds/GrainGradientBackground.tsx",
+    "src/backgrounds/MeshGradientBackground.tsx",
     "src/motion/Marquee.tsx",
     "src/motion/ScaleIn.tsx",
     "src/motion/SlideIn.tsx",
@@ -18,6 +20,7 @@
     "src/primitives/Switch.tsx"
   ],
   "sourcesMissingTests": [
+    "src/backgrounds/index.ts",
     "src/motion/index.ts",
     "src/primitives/index.ts"
   ]

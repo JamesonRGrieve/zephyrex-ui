@@ -8,12 +8,14 @@ are retained here as required. No paid, noncommercial, or source-available
 
 ## Bundled runtime dependencies
 
-| Package          | License | Copyright / Project                                            |
-| ---------------- | ------- | -------------------------------------------------------------- |
-| `animejs`        | MIT     | © Julien Garnier — <https://github.com/juliangarnier/anime>    |
-| `motion`         | MIT     | © Motion (Framer) — <https://github.com/motiondivision/motion> |
-| `clsx`           | MIT     | © Luke Edwards — <https://github.com/lukeed/clsx>              |
-| `tailwind-merge` | MIT     | © Dany Castillo — <https://github.com/dcastil/tailwind-merge>  |
+| Package                       | License    | Copyright / Project                                            |
+| ----------------------------- | ---------- | -------------------------------------------------------------- |
+| `animejs`                     | MIT        | © Julien Garnier — <https://github.com/juliangarnier/anime>    |
+| `motion`                      | MIT        | © Motion (Framer) — <https://github.com/motiondivision/motion> |
+| `clsx`                        | MIT        | © Luke Edwards — <https://github.com/lukeed/clsx>              |
+| `tailwind-merge`              | MIT        | © Dany Castillo — <https://github.com/dcastil/tailwind-merge>  |
+| `class-variance-authority`    | Apache-2.0 | © Joe Bell — <https://github.com/joe-bell/cva>                 |
+| `@paper-design/shaders-react` | Apache-2.0 | © Paper — <https://github.com/paper-design/shaders>            |
 
 The MIT license text (applies to every MIT entry above and below):
 
