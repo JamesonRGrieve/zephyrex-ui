@@ -13,6 +13,7 @@
 //   blocks/       composed marketing / layout sections
 
 export * from './motion';
+export * from './primitives';
 
 // Shared foundation.
 export { usePrefersReducedMotion } from './hooks/usePrefersReducedMotion';

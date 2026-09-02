@@ -1,10 +1,11 @@
 {
-  "componentsTotal": 3,
-  "sourcesTotal": 8,
+  "componentsTotal": 6,
+  "sourcesTotal": 12,
   "componentsMissingStoriesCount": 0,
-  "sourcesMissingTestsCount": 1,
+  "sourcesMissingTestsCount": 2,
   "componentsMissingStories": [],
   "sourcesMissingTests": [
-    "src/motion/index.ts"
+    "src/motion/index.ts",
+    "src/primitives/index.ts"
   ]
 }

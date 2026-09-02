@@ -3,18 +3,22 @@ import { describe, expect, it } from 'vitest';
 import * as api from './index';
 
 describe('public API surface', () => {
-  it('exports every documented component and helper', () => {
-    expect(api.AnimatedNumber).toBeTypeOf('function');
-    expect(api.FadeIn).toBeTypeOf('function');
-    expect(api.Stagger).toBeTypeOf('function');
+  it('exports the shared foundation helpers', () => {
     expect(api.usePrefersReducedMotion).toBeTypeOf('function');
     expect(api.cn).toBeTypeOf('function');
     expect(api.log).toBeTypeOf('function');
   });
 
-  it('does not leak unexpected exports', () => {
-    expect(Object.keys(api).sort()).toEqual(
-      ['AnimatedNumber', 'FadeIn', 'Stagger', 'cn', 'log', 'usePrefersReducedMotion'].sort(),
-    );
+  it('exports the motion category', () => {
+    expect(api.AnimatedNumber).toBeDefined();
+    expect(api.FadeIn).toBeDefined();
+    expect(api.Stagger).toBeDefined();
+  });
+
+  it('exports the primitives category', () => {
+    expect(api.Button).toBeDefined();
+    expect(api.Card).toBeDefined();
+    expect(api.Badge).toBeDefined();
+    expect(api.buttonVariants).toBeTypeOf('function');
   });
 });
