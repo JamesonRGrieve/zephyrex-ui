@@ -1,9 +1,18 @@
 {
-  "componentsTotal": 6,
-  "sourcesTotal": 12,
-  "componentsMissingStoriesCount": 0,
+  "componentsTotal": 14,
+  "sourcesTotal": 20,
+  "componentsMissingStoriesCount": 8,
   "sourcesMissingTestsCount": 2,
-  "componentsMissingStories": [],
+  "componentsMissingStories": [
+    "src/primitives/Alert.tsx",
+    "src/primitives/Input.tsx",
+    "src/primitives/Label.tsx",
+    "src/primitives/Progress.tsx",
+    "src/primitives/Separator.tsx",
+    "src/primitives/Skeleton.tsx",
+    "src/primitives/Spinner.tsx",
+    "src/primitives/Switch.tsx"
+  ],
   "sourcesMissingTests": [
     "src/motion/index.ts",
     "src/primitives/index.ts"
