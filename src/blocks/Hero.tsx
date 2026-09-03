@@ -16,7 +16,7 @@ export interface HeroProps {
 /** Centered marketing hero with a fade-in entrance and an optional shader background. */
 export function Hero({ title, subtitle, actions, background, className }: HeroProps): JSX.Element {
   return (
-    <section className={cn('relative overflow-hidden px-6 py-24 text-center', className)}>
+    <section data-slot='hero' className={cn('relative overflow-hidden px-6 py-24 text-center', className)}>
       {background}
       <FadeIn className='relative mx-auto max-w-3xl'>
         <h1 className='text-4xl font-bold tracking-tight text-foreground sm:text-6xl'>{title}</h1>
@@ -26,5 +26,3 @@ export function Hero({ title, subtitle, actions, background, className }: HeroPr
     </section>
   );
 }
-
-export default Hero;

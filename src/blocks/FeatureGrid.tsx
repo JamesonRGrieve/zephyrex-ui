@@ -36,5 +36,3 @@ export function FeatureGrid({ features, columns = 3, className }: FeatureGridPro
     </Stagger>
   );
 }
-
-export default FeatureGrid;

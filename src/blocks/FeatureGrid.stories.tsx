@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { Meta, StoryObj } from '@storybook/react';
-import FeatureGrid from './FeatureGrid';
+import { FeatureGrid } from './FeatureGrid';
 
 const meta: Meta<typeof FeatureGrid> = {
   title: 'Blocks/FeatureGrid',

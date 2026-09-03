@@ -44,6 +44,7 @@ export function Sparkline({
 }: SparklineProps): JSX.Element {
   return (
     <svg
+      data-slot='sparkline'
       width={width}
       height={height}
       viewBox={`0 0 ${width} ${height}`}
@@ -63,5 +64,3 @@ export function Sparkline({
     </svg>
   );
 }
-
-export default Sparkline;

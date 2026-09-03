@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { Meta, StoryObj } from '@storybook/react';
-import MeshGradientBackground from './MeshGradientBackground';
+import { MeshGradientBackground } from './MeshGradientBackground';
 
 const meta: Meta<typeof MeshGradientBackground> = {
   title: 'Backgrounds/MeshGradientBackground',

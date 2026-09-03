@@ -51,5 +51,3 @@ export function PricingCard({
     </Card>
   );
 }
-
-export default PricingCard;

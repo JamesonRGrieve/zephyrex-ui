@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { Meta, StoryObj } from '@storybook/react';
-import Sparkline from './Sparkline';
+import { Sparkline } from './Sparkline';
 
 const meta: Meta<typeof Sparkline> = {
   title: 'Visualization/Sparkline',

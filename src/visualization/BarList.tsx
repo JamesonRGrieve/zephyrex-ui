@@ -21,7 +21,7 @@ const defaultFormatter = (value: number): string => String(value);
 export function BarList({ data, className, valueFormatter = defaultFormatter }: BarListProps): JSX.Element {
   const max = Math.max(...data.map((item) => item.value), 1);
   return (
-    <div className={cn('flex flex-col gap-2', className)}>
+    <div data-slot='bar-list' className={cn('flex flex-col gap-2', className)}>
       {data.map((item) => (
         <div key={item.label} className='flex items-center gap-2'>
           <div className='relative h-8 flex-1 overflow-hidden rounded-md bg-muted'>
@@ -37,5 +37,3 @@ export function BarList({ data, className, valueFormatter = defaultFormatter }: 
     </div>
   );
 }
-
-export default BarList;

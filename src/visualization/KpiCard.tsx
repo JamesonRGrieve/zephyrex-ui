@@ -4,7 +4,7 @@ import { cn } from '../lib/utils';
 import { AnimatedNumber } from '../motion/AnimatedNumber';
 import { Badge } from '../primitives/Badge';
 import { Card } from '../primitives/Card';
-import Sparkline from './Sparkline';
+import { Sparkline } from './Sparkline';
 
 const SPARKLINE_WIDTH = 220;
 
@@ -41,5 +41,3 @@ export function KpiCard({ label, value, format, delta, trend, className }: KpiCa
     </Card>
   );
 }
-
-export default KpiCard;

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { Meta, StoryObj } from '@storybook/react';
-import KpiCard from './KpiCard';
+import { KpiCard } from './KpiCard';
 
 const meta: Meta<typeof KpiCard> = {
   title: 'Visualization/KpiCard',

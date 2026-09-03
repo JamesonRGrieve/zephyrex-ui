@@ -2,7 +2,7 @@
 import { render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { stubReducedMotion } from '../../tests/reducedMotion';
-import KpiCard from './KpiCard';
+import { KpiCard } from './KpiCard';
 
 describe('KpiCard', () => {
   afterEach(() => {

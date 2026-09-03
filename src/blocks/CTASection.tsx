@@ -20,5 +20,3 @@ export function CTASection({ title, description, action, className }: CTASection
     </ScaleIn>
   );
 }
-
-export default CTASection;

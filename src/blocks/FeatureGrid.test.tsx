@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import FeatureGrid from './FeatureGrid';
+import { FeatureGrid } from './FeatureGrid';
 
 const features = [
   { title: 'Fast', description: 'Blazing performance.' },

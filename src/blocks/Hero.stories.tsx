@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { Meta, StoryObj } from '@storybook/react';
-import MeshGradientBackground from '../backgrounds/MeshGradientBackground';
+import { MeshGradientBackground } from '../backgrounds/MeshGradientBackground';
 import { Button } from '../primitives/Button';
-import Hero from './Hero';
+import { Hero } from './Hero';
 
 const meta: Meta<typeof Hero> = {
   title: 'Blocks/Hero',

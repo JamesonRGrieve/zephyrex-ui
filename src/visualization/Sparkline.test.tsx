@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import Sparkline from './Sparkline';
+import { Sparkline } from './Sparkline';
 
 describe('Sparkline', () => {
   it('plots a polyline from the data series', () => {

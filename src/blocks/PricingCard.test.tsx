@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import PricingCard from './PricingCard';
+import { PricingCard } from './PricingCard';
 
 describe('PricingCard', () => {
   it('renders the tier name, price, and features', () => {

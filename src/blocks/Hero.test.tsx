@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import Hero from './Hero';
+import { Hero } from './Hero';
 
 describe('Hero', () => {
   it('renders the title, subtitle, and actions', () => {

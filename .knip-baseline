@@ -4,6 +4,7 @@
     "classMembers",
     "dependencies",
     "devDependencies",
+    "duplicates",
     "enumMembers",
     "exports",
     "files",
@@ -14,7 +15,7 @@
     "unresolved"
   ],
   "totals": {
-    "total": 9
+    "total": 0
   },
   "counts": {
     "files": 0,
@@ -28,7 +29,7 @@
     "types": 0,
     "enumMembers": 0,
     "classMembers": 0,
-    "duplicates": 9,
+    "duplicates": 0,
     "namespaceMembers": 0
   }
 }

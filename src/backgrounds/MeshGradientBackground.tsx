@@ -19,5 +19,3 @@ export function MeshGradientBackground({ className, speed, ...props }: MeshGradi
     <MeshGradient className={cn('absolute inset-0 -z-10 h-full w-full', className)} speed={effectiveSpeed} {...props} />
   );
 }
-
-export default MeshGradientBackground;
