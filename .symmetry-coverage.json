@@ -1,12 +1,13 @@
 {
   "componentsTotal": 27,
-  "sourcesTotal": 36,
+  "sourcesTotal": 37,
   "componentsMissingStoriesCount": 0,
-  "sourcesMissingTestsCount": 5,
+  "sourcesMissingTestsCount": 6,
   "componentsMissingStories": [],
   "sourcesMissingTests": [
     "src/backgrounds/index.ts",
     "src/blocks/index.ts",
+    "src/forms/index.ts",
     "src/motion/index.ts",
     "src/primitives/index.ts",
     "src/visualization/index.ts"

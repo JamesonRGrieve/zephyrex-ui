@@ -21,6 +21,11 @@ are retained here as required. No paid, noncommercial, or source-available
 | `@radix-ui/react-switch`      | MIT        | © WorkOS/Radix — <https://github.com/radix-ui/primitives>      |
 | `@radix-ui/react-progress`    | MIT        | © WorkOS/Radix — <https://github.com/radix-ui/primitives>      |
 
+Additionally, the **forms** category re-exports **`@jgrieve/forms`** (the
+`dynamic-form` sibling library), which is **AGPL-3.0-or-later** — the same license
+as this package, so it composes cleanly. It is linked as a local dependency
+(`link:../dynamic-form`); a published build would depend on the released package.
+
 The MIT license text (applies to every MIT entry above and below):
 
 ```

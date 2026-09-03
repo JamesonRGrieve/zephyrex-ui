@@ -21,4 +21,10 @@ describe('public API surface', () => {
     expect(api.Badge).toBeDefined();
     expect(api.buttonVariants).toBeTypeOf('function');
   });
+
+  it('re-exports the forms category from @jgrieve/forms', () => {
+    expect(api.DynamicForm).toBeDefined();
+    expect(api.Field).toBeDefined();
+    expect(api.TextField).toBeDefined();
+  });
 });

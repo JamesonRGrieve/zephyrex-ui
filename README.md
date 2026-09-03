@@ -37,6 +37,7 @@ animation behind `prefers-reduced-motion`.
 | **backgrounds** (Paper Shaders)     | `MeshGradientBackground`, `GrainGradientBackground`                                                                                                              |
 | **visualization** (Tremor patterns) | `Sparkline`, `BarList`, `KpiCard`                                                                                                                                |
 | **blocks** (composed sections)      | `Hero`, `FeatureGrid`, `CTASection`, `PricingCard`                                                                                                               |
+| **forms** (`@jgrieve/forms`)        | `DynamicForm`, `Field`, `TextField`, `PasswordField`, `SelectField`, `RadioField`, `CheckField`                                                                  |
 | **foundation**                      | `usePrefersReducedMotion`, `cn`, `log`                                                                                                                           |
 
 ```tsx

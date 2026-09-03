@@ -9,6 +9,9 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
       '@/zephyrex-ui': resolve(__dirname, 'src'),
     },
+    // The linked @jgrieve/forms resolves its own React; force a single instance
+    // so its hook-using components (DynamicForm) share this package's React.
+    dedupe: ['react', 'react-dom', 'react/jsx-runtime'],
   },
   test: {
     include: ['tests/**/*.test.{ts,tsx}', 'src/**/*.test.{ts,tsx}'],

@@ -26,6 +26,7 @@ lives in `src/hooks/` and `src/lib/`.
 | `backgrounds/`   | Paper Shaders (WebGL)                            | MeshGradientBackground, GrainGradientBackground                                                     |
 | `visualization/` | Tremor patterns, native SVG/DOM                  | Sparkline, BarList, KpiCard                                                                         |
 | `blocks/`        | composition of the above                         | Hero, FeatureGrid, CTASection, PricingCard                                                          |
+| `forms/`         | re-exported from `@jgrieve/forms` (AGPL sibling) | DynamicForm, Field, TextField, PasswordField, SelectField, RadioField, CheckField                   |
 | foundation       | —                                                | `usePrefersReducedMotion`, `cn`, `log`                                                              |
 
 The **design-token substrate** is `src/app/globals.css` (Tailwind v4 `@theme` +
