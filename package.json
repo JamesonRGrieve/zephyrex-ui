@@ -59,7 +59,7 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:storybook": "sh ./scripts/run-storybook-playwright-tests.sh",
-    "compile": "tsc -p tsconfig.compile.json",
+    "compile": "tsc -p tsconfig.compile.json && cp src/app/globals.css dist/styles.css",
     "prepare": "git config core.hooksPath .githooks 2>/dev/null || true",
     "precommit": "pnpm compile && pnpm check",
     "dev": "pnpm storybook",
@@ -89,6 +89,9 @@
   "files": [
     "dist"
   ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "_moduleAliases": {
     "@": "."
   },
@@ -97,6 +100,7 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
+    "./styles.css": "./dist/styles.css",
     "./*": {
       "types": "./dist/*.d.ts",
       "default": "./dist/*.js"

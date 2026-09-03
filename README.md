@@ -17,10 +17,13 @@ see `THIRD-PARTY-LICENSES.md`.
 pnpm add @zephyrex/ui react react-dom
 ```
 
-`react` and `react-dom` (>=18) are peer dependencies. The design tokens live in
-`src/app/globals.css` (Tailwind v4 `@theme` block + light/dark token layers) — copy
-those layers into your app's global stylesheet so components inherit the theme.
-(A shipped CSS entry point is a planned packaging follow-up.)
+`react` and `react-dom` (>=18) are peer dependencies. Import the design-token
+stylesheet once at your app root so components inherit the theme (Tailwind v4
+`@theme` block + light/dark token layers):
+
+```ts
+import '@zephyrex/ui/styles.css';
+```
 
 ## Catalog
 
