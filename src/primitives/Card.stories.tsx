@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { Meta, StoryObj } from '@storybook/react';
-import Button from './Button';
-import Card, { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './Card';
+import { Button } from './Button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './Card';
 
 const meta: Meta<typeof Card> = {
   title: 'Primitives/Card',

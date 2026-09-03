@@ -33,11 +33,16 @@ export function FadeIn({
   const prefersReduced = usePrefersReducedMotion();
 
   if (prefersReduced) {
-    return <div className={cn(className)}>{children}</div>;
+    return (
+      <div data-slot='fade-in' className={cn(className)}>
+        {children}
+      </div>
+    );
   }
 
   return (
     <motion.div
+      data-slot='fade-in'
       className={cn(className)}
       initial={{ opacity: 0, y: yOffsetPx }}
       animate={{ opacity: 1, y: 0 }}
@@ -47,5 +52,3 @@ export function FadeIn({
     </motion.div>
   );
 }
-
-export default FadeIn;

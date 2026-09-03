@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { JSX, ReactNode } from 'react';
 import { cn } from '../lib/utils';
-import Stagger from '../motion/Stagger';
-import Card, { CardDescription, CardTitle } from '../primitives/Card';
+import { Stagger } from '../motion/Stagger';
+import { Card, CardDescription, CardTitle } from '../primitives/Card';
 
 export interface Feature {
   title: string;

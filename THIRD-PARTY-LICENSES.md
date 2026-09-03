@@ -16,6 +16,10 @@ are retained here as required. No paid, noncommercial, or source-available
 | `tailwind-merge`              | MIT        | © Dany Castillo — <https://github.com/dcastil/tailwind-merge>  |
 | `class-variance-authority`    | Apache-2.0 | © Joe Bell — <https://github.com/joe-bell/cva>                 |
 | `@paper-design/shaders-react` | Apache-2.0 | © Paper — <https://github.com/paper-design/shaders>            |
+| `@radix-ui/react-label`       | MIT        | © WorkOS/Radix — <https://github.com/radix-ui/primitives>      |
+| `@radix-ui/react-separator`   | MIT        | © WorkOS/Radix — <https://github.com/radix-ui/primitives>      |
+| `@radix-ui/react-switch`      | MIT        | © WorkOS/Radix — <https://github.com/radix-ui/primitives>      |
+| `@radix-ui/react-progress`    | MIT        | © WorkOS/Radix — <https://github.com/radix-ui/primitives>      |
 
 The MIT license text (applies to every MIT entry above and below):
 

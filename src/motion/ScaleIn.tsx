@@ -27,11 +27,16 @@ export function ScaleIn({
   const prefersReduced = usePrefersReducedMotion();
 
   if (prefersReduced) {
-    return <div className={cn(className)}>{children}</div>;
+    return (
+      <div data-slot='scale-in' className={cn(className)}>
+        {children}
+      </div>
+    );
   }
 
   return (
     <motion.div
+      data-slot='scale-in'
       className={cn(className)}
       initial={{ opacity: 0, scale: fromScale }}
       animate={{ opacity: 1, scale: 1 }}
@@ -41,5 +46,3 @@ export function ScaleIn({
     </motion.div>
   );
 }
-
-export default ScaleIn;

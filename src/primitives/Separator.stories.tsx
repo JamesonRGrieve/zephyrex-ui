@@ -1,11 +1,15 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { Meta, StoryObj } from '@storybook/react';
-import Separator from './Separator';
+import { Separator } from './Separator';
 
 const meta: Meta<typeof Separator> = {
   title: 'Primitives/Separator',
   component: Separator,
   tags: ['autodocs'],
+  argTypes: {
+    orientation: { control: 'inline-radio', options: ['horizontal', 'vertical'] },
+    decorative: { control: 'boolean' },
+  },
 };
 export default meta;
 

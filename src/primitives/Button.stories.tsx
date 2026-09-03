@@ -1,13 +1,22 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, fn, userEvent, within } from 'storybook/test';
-import Button from './Button';
+import { Button } from './Button';
 
 const meta: Meta<typeof Button> = {
   title: 'Primitives/Button',
   component: Button,
   tags: ['autodocs'],
-  args: { children: 'Button' },
+  args: { children: 'Button', onClick: fn() },
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['primary', 'secondary', 'destructive', 'outline', 'ghost', 'link'],
+    },
+    size: { control: 'select', options: ['sm', 'md', 'lg', 'icon'] },
+    disabled: { control: 'boolean' },
+    type: { control: 'select', options: ['button', 'submit', 'reset'] },
+  },
 };
 export default meta;
 
@@ -19,23 +28,33 @@ export const Destructive: Story = { args: { variant: 'destructive' } };
 export const Outline: Story = { args: { variant: 'outline' } };
 export const Ghost: Story = { args: { variant: 'ghost' } };
 export const Link: Story = { args: { variant: 'link' } };
+export const Small: Story = { args: { size: 'sm' } };
+export const Large: Story = { args: { size: 'lg' } };
 export const Disabled: Story = { args: { disabled: true } };
 
-export const Sizes: Story = {
-  render: () => (
-    <div className='flex items-center gap-3'>
-      <Button size='sm'>Small</Button>
-      <Button size='md'>Medium</Button>
-      <Button size='lg'>Large</Button>
+export const AllVariants: Story = {
+  render: (args) => (
+    <div className='flex flex-wrap gap-3'>
+      {(['primary', 'secondary', 'destructive', 'outline', 'ghost', 'link'] as const).map((variant) => (
+        <Button key={variant} {...args} variant={variant}>
+          {variant}
+        </Button>
+      ))}
     </div>
   ),
 };
 
 export const Clickable: Story = {
-  args: { children: 'Click me', onClick: fn() },
   play: async ({ args, canvasElement }) => {
-    const canvas = within(canvasElement);
-    await userEvent.click(canvas.getByRole('button', { name: 'Click me' }));
+    await userEvent.click(within(canvasElement).getByRole('button'));
     await expect(args.onClick).toHaveBeenCalledTimes(1);
+  },
+};
+
+export const DisabledDoesNotClick: Story = {
+  args: { disabled: true },
+  play: async ({ args, canvasElement }) => {
+    await userEvent.click(within(canvasElement).getByRole('button'), { pointerEventsCheck: 0 });
+    await expect(args.onClick).not.toHaveBeenCalled();
   },
 };

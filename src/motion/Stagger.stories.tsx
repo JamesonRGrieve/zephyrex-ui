@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { Meta, StoryObj } from '@storybook/react';
-import Stagger from './Stagger';
+import { Stagger } from './Stagger';
 
 const meta: Meta<typeof Stagger> = {
   title: 'Motion/Stagger',

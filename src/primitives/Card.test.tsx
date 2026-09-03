@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import Card, { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './Card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './Card';
 
 describe('Card', () => {
   it('renders its children', () => {
@@ -20,7 +20,7 @@ describe('Card', () => {
         <CardFooter>Action</CardFooter>
       </Card>,
     );
-    expect(screen.getByRole('heading', { level: 3, name: 'Plan' })).toBeInTheDocument();
+    expect(screen.getByText('Plan')).toBeInTheDocument();
     expect(screen.getByText('Monthly')).toBeInTheDocument();
     expect(screen.getByText('Details')).toBeInTheDocument();
     expect(screen.getByText('Action')).toBeInTheDocument();

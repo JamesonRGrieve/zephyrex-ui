@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import Separator from './Separator';
+import { Separator } from './Separator';
 
 describe('Separator', () => {
   it('exposes the separator role by default', () => {

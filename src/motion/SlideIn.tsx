@@ -31,7 +31,11 @@ export function SlideIn({
   const prefersReduced = usePrefersReducedMotion();
 
   if (prefersReduced) {
-    return <div className={cn(className)}>{children}</div>;
+    return (
+      <div data-slot='slide-in' className={cn(className)}>
+        {children}
+      </div>
+    );
   }
 
   const offsets = {
@@ -44,6 +48,7 @@ export function SlideIn({
 
   return (
     <motion.div
+      data-slot='slide-in'
       className={cn(className)}
       initial={{ opacity: 0, x, y }}
       animate={{ opacity: 1, x: 0, y: 0 }}
@@ -53,5 +58,3 @@ export function SlideIn({
     </motion.div>
   );
 }
-
-export default SlideIn;

@@ -2,7 +2,7 @@
 import { render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { stubReducedMotion } from '../../tests/reducedMotion';
-import TextShimmer from './TextShimmer';
+import { TextShimmer } from './TextShimmer';
 
 describe('TextShimmer', () => {
   afterEach(() => {

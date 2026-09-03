@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { Meta, StoryObj } from '@storybook/react';
-import Button from '../primitives/Button';
+import { Button } from '../primitives/Button';
 import PricingCard from './PricingCard';
 
 const meta: Meta<typeof PricingCard> = {

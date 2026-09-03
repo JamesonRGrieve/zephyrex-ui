@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { Meta, StoryObj } from '@storybook/react';
-import Button from '../primitives/Button';
+import { Button } from '../primitives/Button';
 import CTASection from './CTASection';
 
 const meta: Meta<typeof CTASection> = {

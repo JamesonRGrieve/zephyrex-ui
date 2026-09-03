@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { JSX, ReactNode } from 'react';
 import { cn } from '../lib/utils';
-import FadeIn from '../motion/FadeIn';
+import { FadeIn } from '../motion/FadeIn';
 
 export interface HeroProps {
   title: ReactNode;

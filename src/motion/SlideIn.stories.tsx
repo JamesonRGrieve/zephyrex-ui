@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { Meta, StoryObj } from '@storybook/react';
-import SlideIn from './SlideIn';
+import { SlideIn } from './SlideIn';
 
 const meta: Meta<typeof SlideIn> = {
   title: 'Motion/SlideIn',

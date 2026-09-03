@@ -1,38 +1,25 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
-import { type ButtonHTMLAttributes, forwardRef } from 'react';
+import * as SwitchPrimitive from '@radix-ui/react-switch';
+import type { ComponentProps, JSX } from 'react';
 import { cn } from '../lib/utils';
 
-export interface SwitchProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onChange' | 'type'> {
-  checked?: boolean;
-  onCheckedChange?: (checked: boolean) => void;
-}
+export type SwitchProps = ComponentProps<typeof SwitchPrimitive.Root>;
 
-/** Accessible toggle: a `role=switch` button reflecting state via `aria-checked`. */
-const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
-  ({ className, checked = false, onCheckedChange, disabled, ...props }, ref) => (
-    <button
-      ref={ref}
-      type='button'
-      role='switch'
-      aria-checked={checked}
-      disabled={disabled}
-      onClick={() => onCheckedChange?.(!checked)}
+/** Accessible toggle on Radix Switch (shadcn). Controlled via `checked` / `onCheckedChange`. */
+export function Switch({ className, ...props }: SwitchProps): JSX.Element {
+  return (
+    <SwitchPrimitive.Root
+      data-slot='switch'
       className={cn(
-        'peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50',
-        checked ? 'bg-primary' : 'bg-input',
+        'peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input',
         className,
       )}
       {...props}
     >
-      <span
-        className={cn(
-          'pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 motion-safe:transition-transform',
-          checked ? 'translate-x-5' : 'translate-x-0',
-        )}
+      <SwitchPrimitive.Thumb
+        data-slot='switch-thumb'
+        className='pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 motion-safe:transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0'
       />
-    </button>
-  ),
-);
-Switch.displayName = 'Switch';
-
-export default Switch;
+    </SwitchPrimitive.Root>
+  );
+}

@@ -1,13 +1,12 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import { type VariantProps, cva } from 'class-variance-authority';
-import { type ButtonHTMLAttributes, forwardRef } from 'react';
+import type { ComponentProps, JSX } from 'react';
 import { cn } from '../lib/utils';
 
 /**
- * Tokenized button following the shadcn/Radix convention shared by the vetted
- * sources (Aceternity, Vengeance, Watermelon). Every color is a semantic token,
- * the focus ring is keyboard-visible, and the press-scale is gated behind
- * `motion-safe` so it respects `prefers-reduced-motion`.
+ * Tokenized button (shadcn convention). Every color is a semantic token, the focus
+ * ring is keyboard-visible, and the press-scale is gated behind `motion-safe` so it
+ * respects `prefers-reduced-motion`. `ref` flows through props (React 19).
  */
 export const buttonVariants = cva(
   'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 motion-safe:active:scale-[0.98]',
@@ -32,11 +31,8 @@ export const buttonVariants = cva(
   },
 );
 
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & VariantProps<typeof buttonVariants>;
+export type ButtonProps = ComponentProps<'button'> & VariantProps<typeof buttonVariants>;
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ className, variant, size, type = 'button', ...props }, ref) => (
-  <button ref={ref} type={type} className={cn(buttonVariants({ variant, size }), className)} {...props} />
-));
-Button.displayName = 'Button';
-
-export default Button;
+export function Button({ className, variant, size, type = 'button', ...props }: ButtonProps): JSX.Element {
+  return <button data-slot='button' type={type} className={cn(buttonVariants({ variant, size }), className)} {...props} />;
+}

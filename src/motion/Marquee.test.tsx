@@ -2,7 +2,7 @@
 import { render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { stubReducedMotion } from '../../tests/reducedMotion';
-import Marquee from './Marquee';
+import { Marquee } from './Marquee';
 
 describe('Marquee', () => {
   afterEach(() => {

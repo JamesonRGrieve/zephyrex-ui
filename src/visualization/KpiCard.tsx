@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { JSX } from 'react';
 import { cn } from '../lib/utils';
-import AnimatedNumber from '../motion/AnimatedNumber';
-import Badge from '../primitives/Badge';
-import Card from '../primitives/Card';
+import { AnimatedNumber } from '../motion/AnimatedNumber';
+import { Badge } from '../primitives/Badge';
+import { Card } from '../primitives/Card';
 import Sparkline from './Sparkline';
 
 const SPARKLINE_WIDTH = 220;

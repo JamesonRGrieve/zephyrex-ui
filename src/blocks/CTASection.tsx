@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { JSX, ReactNode } from 'react';
 import { cn } from '../lib/utils';
-import ScaleIn from '../motion/ScaleIn';
+import { ScaleIn } from '../motion/ScaleIn';
 
 export interface CTASectionProps {
   title: ReactNode;

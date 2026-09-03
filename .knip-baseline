@@ -14,7 +14,7 @@
     "unresolved"
   ],
   "totals": {
-    "total": 22
+    "total": 9
   },
   "counts": {
     "files": 0,
@@ -28,7 +28,7 @@
     "types": 0,
     "enumMembers": 0,
     "classMembers": 0,
-    "duplicates": 22,
+    "duplicates": 9,
     "namespaceMembers": 0
   }
 }

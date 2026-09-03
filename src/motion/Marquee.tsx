@@ -24,11 +24,15 @@ export function Marquee({
   const prefersReduced = usePrefersReducedMotion();
 
   if (prefersReduced) {
-    return <div className={cn('flex gap-8 overflow-hidden', className)}>{children}</div>;
+    return (
+      <div data-slot='marquee' className={cn('flex gap-8 overflow-hidden', className)}>
+        {children}
+      </div>
+    );
   }
 
   return (
-    <div className={cn('overflow-hidden', className)}>
+    <div data-slot='marquee' className={cn('overflow-hidden', className)}>
       <motion.div
         className='flex w-max'
         initial={{ x: reverse ? '-50%' : '0%' }}
@@ -43,5 +47,3 @@ export function Marquee({
     </div>
   );
 }
-
-export default Marquee;

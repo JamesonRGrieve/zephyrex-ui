@@ -1,12 +1,18 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { Meta, StoryObj } from '@storybook/react';
-import Badge from './Badge';
+import { Badge } from './Badge';
 
 const meta: Meta<typeof Badge> = {
   title: 'Primitives/Badge',
   component: Badge,
   tags: ['autodocs'],
   args: { children: 'Badge' },
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['default', 'secondary', 'success', 'warning', 'destructive', 'outline'],
+    },
+  },
 };
 export default meta;
 
@@ -20,14 +26,13 @@ export const Destructive: Story = { args: { variant: 'destructive', children: 'E
 export const Outline: Story = { args: { variant: 'outline' } };
 
 export const AllVariants: Story = {
-  render: () => (
+  render: (args) => (
     <div className='flex flex-wrap gap-2'>
-      <Badge variant='default'>Default</Badge>
-      <Badge variant='secondary'>Secondary</Badge>
-      <Badge variant='success'>Success</Badge>
-      <Badge variant='warning'>Warning</Badge>
-      <Badge variant='destructive'>Destructive</Badge>
-      <Badge variant='outline'>Outline</Badge>
+      {(['default', 'secondary', 'success', 'warning', 'destructive', 'outline'] as const).map((variant) => (
+        <Badge key={variant} {...args} variant={variant}>
+          {variant}
+        </Badge>
+      ))}
     </div>
   ),
 };

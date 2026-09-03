@@ -1,13 +1,18 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import { expect, userEvent, within } from 'storybook/test';
-import Switch from './Switch';
+import { expect, fn, userEvent, within } from 'storybook/test';
+import { Switch } from './Switch';
 
 const meta: Meta<typeof Switch> = {
   title: 'Primitives/Switch',
   component: Switch,
   tags: ['autodocs'],
+  args: { 'aria-label': 'Notifications', onCheckedChange: fn() },
+  argTypes: {
+    checked: { control: 'boolean' },
+    disabled: { control: 'boolean' },
+  },
 };
 export default meta;
 
@@ -18,15 +23,24 @@ export const On: Story = { args: { checked: true } };
 export const Disabled: Story = { args: { checked: true, disabled: true } };
 
 export const Interactive: Story = {
-  render: () => {
+  render: (args) => {
     const [checked, setChecked] = useState(false);
-    return <Switch checked={checked} onCheckedChange={setChecked} aria-label='Notifications' />;
+    return (
+      <Switch
+        {...args}
+        checked={checked}
+        onCheckedChange={(value) => {
+          setChecked(value);
+          args.onCheckedChange?.(value);
+        }}
+      />
+    );
   },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const toggle = canvas.getByRole('switch');
+  play: async ({ args, canvasElement }) => {
+    const toggle = within(canvasElement).getByRole('switch');
     await expect(toggle).toHaveAttribute('aria-checked', 'false');
     await userEvent.click(toggle);
     await expect(toggle).toHaveAttribute('aria-checked', 'true');
+    await expect(args.onCheckedChange).toHaveBeenCalledWith(true);
   },
 };

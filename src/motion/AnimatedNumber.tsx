@@ -62,10 +62,8 @@ export function AnimatedNumber({
   }, [value, from, durationMs, format, prefersReduced]);
 
   return (
-    <span ref={ref} role='img' className={cn(className)} aria-label={format(value)} {...props}>
+    <span ref={ref} data-slot='animated-number' role='img' className={cn(className)} aria-label={format(value)} {...props}>
       {format(value)}
     </span>
   );
 }
-
-export default AnimatedNumber;

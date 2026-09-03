@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import { type VariantProps, cva } from 'class-variance-authority';
-import type { HTMLAttributes, JSX } from 'react';
+import type { ComponentProps, JSX } from 'react';
 import { cn } from '../lib/utils';
 
 export const alertVariants = cva('relative w-full rounded-lg border p-4 text-sm', {
@@ -16,10 +16,8 @@ export const alertVariants = cva('relative w-full rounded-lg border p-4 text-sm'
   defaultVariants: { variant: 'default' },
 });
 
-export type AlertProps = HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>;
+export type AlertProps = ComponentProps<'div'> & VariantProps<typeof alertVariants>;
 
 export function Alert({ className, variant, ...props }: AlertProps): JSX.Element {
-  return <div role='alert' className={cn(alertVariants({ variant }), className)} {...props} />;
+  return <div data-slot='alert' role='alert' className={cn(alertVariants({ variant }), className)} {...props} />;
 }
-
-export default Alert;

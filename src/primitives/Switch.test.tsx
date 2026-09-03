@@ -2,7 +2,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
-import Switch from './Switch';
+import { Switch } from './Switch';
 
 describe('Switch', () => {
   it('reflects checked state via aria-checked', () => {

@@ -18,11 +18,16 @@ export function TextShimmer({ children, className, durationMs = DEFAULT_DURATION
   const prefersReduced = usePrefersReducedMotion();
 
   if (prefersReduced) {
-    return <span className={cn('text-foreground', className)}>{children}</span>;
+    return (
+      <span data-slot='text-shimmer' className={cn('text-foreground', className)}>
+        {children}
+      </span>
+    );
   }
 
   return (
     <motion.span
+      data-slot='text-shimmer'
       className={cn('inline-block bg-clip-text text-transparent', className)}
       style={{
         backgroundImage:
@@ -37,5 +42,3 @@ export function TextShimmer({ children, className, durationMs = DEFAULT_DURATION
     </motion.span>
   );
 }
-
-export default TextShimmer;

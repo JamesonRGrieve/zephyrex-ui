@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { JSX, ReactNode } from 'react';
 import { cn } from '../lib/utils';
-import Badge from '../primitives/Badge';
-import Card, { CardDescription, CardTitle } from '../primitives/Card';
+import { Badge } from '../primitives/Badge';
+import { Card, CardDescription, CardTitle } from '../primitives/Card';
 
 export interface PricingCardProps {
   name: string;

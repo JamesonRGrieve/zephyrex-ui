@@ -2,7 +2,7 @@
 import { render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { stubReducedMotion } from '../../tests/reducedMotion';
-import SlideIn from './SlideIn';
+import { SlideIn } from './SlideIn';
 
 describe('SlideIn', () => {
   afterEach(() => {

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import { render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import FadeIn from './FadeIn';
+import { FadeIn } from './FadeIn';
 
 function stubReducedMotion(matches: boolean): void {
   vi.stubGlobal(

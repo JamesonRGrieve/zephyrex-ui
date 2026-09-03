@@ -34,7 +34,11 @@ export function Stagger({
   const prefersReduced = usePrefersReducedMotion();
 
   if (prefersReduced) {
-    return <div className={cn(className)}>{children}</div>;
+    return (
+      <div data-slot='stagger' className={cn(className)}>
+        {children}
+      </div>
+    );
   }
 
   const container: Variants = {
@@ -47,12 +51,10 @@ export function Stagger({
   };
 
   return (
-    <motion.div className={cn(className)} variants={container} initial='hidden' animate='visible'>
+    <motion.div data-slot='stagger' className={cn(className)} variants={container} initial='hidden' animate='visible'>
       {Children.map(children, (child) => (
         <motion.div variants={item}>{child}</motion.div>
       ))}
     </motion.div>
   );
 }
-
-export default Stagger;
