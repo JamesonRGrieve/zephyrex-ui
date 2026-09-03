@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
+import { expect, userEvent, within } from 'storybook/test';
 import Switch from './Switch';
 
 const meta: Meta<typeof Switch> = {
@@ -20,5 +21,12 @@ export const Interactive: Story = {
   render: () => {
     const [checked, setChecked] = useState(false);
     return <Switch checked={checked} onCheckedChange={setChecked} aria-label='Notifications' />;
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const toggle = canvas.getByRole('switch');
+    await expect(toggle).toHaveAttribute('aria-checked', 'false');
+    await userEvent.click(toggle);
+    await expect(toggle).toHaveAttribute('aria-checked', 'true');
   },
 };

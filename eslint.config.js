@@ -370,7 +370,20 @@ export default [
     },
   },
   {
-    files: ['src/**/*.test.ts', 'src/**/*.test.tsx', 'tests/**/*.ts', 'tests/**/*.tsx'],
+    // TS parser for all test-directory files (helpers, vitest tests, playwright specs).
+    files: ['tests/**/*.ts', 'tests/**/*.tsx'],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: { jsx: true },
+      },
+    },
+  },
+  {
+    // Vitest rules apply only to vitest test files, never to playwright *.spec.ts.
+    files: ['src/**/*.test.ts', 'src/**/*.test.tsx', 'tests/**/*.test.ts', 'tests/**/*.test.tsx'],
     languageOptions: {
       parser: tsParser,
       parserOptions: {

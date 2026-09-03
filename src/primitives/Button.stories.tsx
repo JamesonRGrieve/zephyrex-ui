@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, fn, userEvent, within } from 'storybook/test';
 import Button from './Button';
 
 const meta: Meta<typeof Button> = {
@@ -28,4 +29,13 @@ export const Sizes: Story = {
       <Button size='lg'>Large</Button>
     </div>
   ),
+};
+
+export const Clickable: Story = {
+  args: { children: 'Click me', onClick: fn() },
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button', { name: 'Click me' }));
+    await expect(args.onClick).toHaveBeenCalledTimes(1);
+  },
 };
