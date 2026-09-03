@@ -6,6 +6,12 @@ const meta: Meta<typeof SlideIn> = {
   title: 'Motion/SlideIn',
   component: SlideIn,
   tags: ['autodocs'],
+  argTypes: {
+    direction: { control: 'inline-radio', options: ['left', 'right', 'up', 'down'] },
+    delayMs: { control: { type: 'range', min: 0, max: 1000, step: 50 } },
+    durationMs: { control: { type: 'range', min: 100, max: 2000, step: 100 } },
+    distancePx: { control: { type: 'range', min: 0, max: 96, step: 4 } },
+  },
   args: { children: <p className='text-lg'>I slide into place.</p> },
 };
 export default meta;

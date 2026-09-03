@@ -6,6 +6,10 @@ const meta: Meta<typeof Marquee> = {
   title: 'Motion/Marquee',
   component: Marquee,
   tags: ['autodocs'],
+  argTypes: {
+    durationMs: { control: { type: 'range', min: 3000, max: 30000, step: 1000 } },
+    reverse: { control: 'boolean' },
+  },
 };
 export default meta;
 

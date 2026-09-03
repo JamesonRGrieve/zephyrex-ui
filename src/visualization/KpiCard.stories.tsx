@@ -6,6 +6,11 @@ const meta: Meta<typeof KpiCard> = {
   title: 'Visualization/KpiCard',
   component: KpiCard,
   tags: ['autodocs'],
+  argTypes: {
+    value: { control: 'number' },
+    delta: { control: 'number' },
+    label: { control: 'text' },
+  },
   decorators: [(Story) => <div className='w-72'>{Story()}</div>],
 };
 export default meta;

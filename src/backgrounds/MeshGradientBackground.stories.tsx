@@ -6,6 +6,9 @@ const meta: Meta<typeof MeshGradientBackground> = {
   title: 'Backgrounds/MeshGradientBackground',
   component: MeshGradientBackground,
   tags: ['autodocs'],
+  argTypes: {
+    speed: { control: { type: 'range', min: 0, max: 3, step: 0.1 } },
+  },
   decorators: [(Story) => <div className='relative h-64 w-full overflow-hidden rounded-lg'>{Story()}</div>],
 };
 export default meta;

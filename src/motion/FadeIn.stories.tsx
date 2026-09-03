@@ -6,6 +6,11 @@ const meta: Meta<typeof FadeIn> = {
   title: 'Motion/FadeIn',
   component: FadeIn,
   tags: ['autodocs'],
+  argTypes: {
+    delayMs: { control: { type: 'range', min: 0, max: 1000, step: 50 } },
+    durationMs: { control: { type: 'range', min: 100, max: 2000, step: 100 } },
+    yOffsetPx: { control: { type: 'range', min: 0, max: 64, step: 4 } },
+  },
   args: {
     children: <p className='text-lg'>I fade and rise into place.</p>,
   },

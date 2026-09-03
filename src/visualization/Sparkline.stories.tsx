@@ -6,6 +6,12 @@ const meta: Meta<typeof Sparkline> = {
   title: 'Visualization/Sparkline',
   component: Sparkline,
   tags: ['autodocs'],
+  argTypes: {
+    width: { control: { type: 'range', min: 60, max: 480, step: 20 } },
+    height: { control: { type: 'range', min: 16, max: 120, step: 4 } },
+    strokeWidth: { control: { type: 'range', min: 1, max: 6, step: 1 } },
+    label: { control: 'text' },
+  },
 };
 export default meta;
 

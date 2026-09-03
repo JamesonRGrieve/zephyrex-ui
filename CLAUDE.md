@@ -43,7 +43,9 @@ utilities (`bg-primary`, `text-muted-foreground`, …) — never a hardcoded col
    `THIRD-PARTY-LICENSES.md`.
 3. Every animated component must respect `prefers-reduced-motion` (via the hook or
    `motion-safe:` utilities) and release its resources on unmount.
-4. `forwardRef` components are anonymous with an explicit `.displayName`.
+4. Components are plain function components (shadcn/React-19): no `forwardRef` —
+   `ref` flows through props; type props with `ComponentProps<'el'>`; add a
+   `data-slot` attribute to the root element; named exports only.
 5. Colocate a `*.stories.tsx` (realistic prop matrix; `play()` for interactive) and
    a `*.test.tsx` (behavior). Add the export to the category barrel.
 6. WebGL/shader components can't render in happy-dom — unit tests mock the shader

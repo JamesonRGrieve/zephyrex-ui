@@ -6,6 +6,9 @@ const meta: Meta<typeof TextShimmer> = {
   title: 'Motion/TextShimmer',
   component: TextShimmer,
   tags: ['autodocs'],
+  argTypes: {
+    durationMs: { control: { type: 'range', min: 500, max: 4000, step: 100 } },
+  },
   args: { children: 'Loading the future…' },
 };
 export default meta;

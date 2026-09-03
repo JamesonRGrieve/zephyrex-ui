@@ -7,6 +7,11 @@ const meta: Meta<typeof AnimatedNumber> = {
   component: AnimatedNumber,
   tags: ['autodocs'],
   args: { value: 1200 },
+  argTypes: {
+    value: { control: 'number' },
+    from: { control: 'number' },
+    durationMs: { control: { type: 'range', min: 100, max: 3000, step: 100 } },
+  },
 };
 export default meta;
 
