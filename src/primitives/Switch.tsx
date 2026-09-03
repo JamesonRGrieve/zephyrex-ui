@@ -8,11 +8,8 @@ export interface SwitchProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement
 }
 
 /** Accessible toggle: a `role=switch` button reflecting state via `aria-checked`. */
-const Switch = forwardRef<HTMLButtonElement, SwitchProps>(function Switch(
-  { className, checked = false, onCheckedChange, disabled, ...props },
-  ref,
-) {
-  return (
+const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
+  ({ className, checked = false, onCheckedChange, disabled, ...props }, ref) => (
     <button
       ref={ref}
       type='button'
@@ -34,7 +31,8 @@ const Switch = forwardRef<HTMLButtonElement, SwitchProps>(function Switch(
         )}
       />
     </button>
-  );
-});
+  ),
+);
+Switch.displayName = 'Switch';
 
 export default Switch;

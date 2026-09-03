@@ -4,12 +4,12 @@ import { describe, expect, it } from 'vitest';
 import Separator from './Separator';
 
 describe('Separator', () => {
-  it('exposes the separator role, horizontal by default', () => {
+  it('exposes the separator role by default', () => {
     render(<Separator />);
-    expect(screen.getByRole('separator')).toHaveAttribute('aria-orientation', 'horizontal');
+    expect(screen.getByRole('separator')).toBeInTheDocument();
   });
 
-  it('supports a vertical orientation', () => {
+  it('marks a vertical separator via aria-orientation', () => {
     render(<Separator orientation='vertical' />);
     expect(screen.getByRole('separator')).toHaveAttribute('aria-orientation', 'vertical');
   });

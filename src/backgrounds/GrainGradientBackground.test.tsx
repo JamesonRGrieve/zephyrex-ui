@@ -2,14 +2,13 @@
 import { render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { stubReducedMotion } from '../../tests/reducedMotion';
+import GrainGradientBackground from './GrainGradientBackground';
 
 vi.mock('@paper-design/shaders-react', () => ({
   GrainGradient: ({ speed, className }: { speed?: number; className?: string }) => (
     <canvas data-testid='grain' data-speed={String(speed)} className={className} />
   ),
 }));
-
-import GrainGradientBackground from './GrainGradientBackground';
 
 describe('GrainGradientBackground', () => {
   afterEach(() => {

@@ -2,6 +2,7 @@
 import { render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { stubReducedMotion } from '../../tests/reducedMotion';
+import MeshGradientBackground from './MeshGradientBackground';
 
 // Paper Shaders requires a real WebGL context (unavailable in happy-dom), so the
 // shader boundary is mocked; the wrapper's reduced-motion speed-gating is the
@@ -11,8 +12,6 @@ vi.mock('@paper-design/shaders-react', () => ({
     <canvas data-testid='mesh' data-speed={String(speed)} className={className} />
   ),
 }));
-
-import MeshGradientBackground from './MeshGradientBackground';
 
 describe('MeshGradientBackground', () => {
   afterEach(() => {
